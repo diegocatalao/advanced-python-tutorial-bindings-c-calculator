@@ -1,5 +1,7 @@
 #include "linalg.h"
 
+#include <stdio.h>
+
 /**
  * @brief Implementação da função que calcula o produto interno.
  *
@@ -76,8 +78,6 @@ static PyObject *dot(PyObject *self, PyObject *args) {
   /* decrementa a referência dos objetos que não serão mais usados */
   Py_DECREF(pyobject_first_list);
   Py_DECREF(pyobject_second_list);
-  Py_DECREF(pyobject_first_list_it);
-  Py_DECREF(pyobject_second_list_it);
 
   return pyobject_dot_product;
 }
@@ -118,7 +118,7 @@ static PyObject *norm(PyObject *self, PyObject *args) {
 
   for (int i = 0; i < vector_st; i++) {
     pyobject_vector_item = PyList_GetItem(pyobject_vector, i);
-    /* verifica se o item é um número antes de operar*/
+    /* verifica se o item é um número antes de operar */
     if (!PyNumber_Check(pyobject_vector_item)) {
       /* se não,  retorna um erro e decrementa a referência do objeto */
       PyErr_SetString(LinalgError, "impossible to operate between non-numbers");
@@ -128,7 +128,8 @@ static PyObject *norm(PyObject *self, PyObject *args) {
     }
 
     /* calcula a norma do vetor */
-    norm += pow(PyFloat_AsDouble(pyobject_vector_item), 2);
+    norm += PyFloat_AsDouble(pyobject_vector_item) *
+            PyFloat_AsDouble(pyobject_vector_item);
   }
 
   norm = sqrt(norm);
@@ -138,7 +139,6 @@ static PyObject *norm(PyObject *self, PyObject *args) {
 
   /* decrementa a referência dos objetos que não serão mais usados */
   Py_DECREF(pyobject_vector);
-  Py_DECREF(pyobject_vector_item);
 
   return pyobject_norm;
 }
