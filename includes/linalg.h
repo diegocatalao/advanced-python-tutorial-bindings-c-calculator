@@ -7,8 +7,22 @@
 
 /* Funções do módulo */
 
+/**
+ * @brief Calcula o produto interno de um vetor e retorna o resultado.
+ *
+ * @param self {PyObject} - Objeto de referência
+ * @param args {PyObject} - Objeto com os argumentos obrigatórios da função
+ * @return PyObject* - Retorna a referência do objeto calculado.
+ */
 static PyObject *dot(PyObject *self, PyObject *args);
 
+/**
+ * @brief Calcula a norma de um vetor e retorna o resultado.
+ *
+ * @param self {PyObject} - Objeto de referência
+ * @param args {PyObject} - Objeto com os argumentos obrigatórios da função
+ * @return PyObject* - Retorna a referência do objeto calculado.
+ */
 static PyObject *norm(PyObject *self, PyObject *args);
 
 /* Definições do módulo */
