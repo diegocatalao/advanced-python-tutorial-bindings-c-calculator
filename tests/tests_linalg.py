@@ -27,7 +27,6 @@ class LinalgTest(unittest.TestCase):
         self.assertEqual(linalg.dot([1], [1]), 1)
         self.assertEqual(linalg.dot([1, 1], [1, 1]), 2)
         self.assertEqual(linalg.dot([1, 2, 3, 4, 5], [6, 7, 8, 9, 0]), 80)
-        pass
 
     def test_argument_consistence_dot(self):
         with self.assertRaises(Exception):
