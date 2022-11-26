@@ -12,8 +12,8 @@ modules = [
         include_dirs=[(BASE_DIR / "includes").as_posix()]
     ),
     Extension(
-        "calculator.logs",
-        sources=[(BASE_DIR / "src/logs.c").as_posix()],
+        "calculator.linalg",
+        sources=[(BASE_DIR / "src/linalg.c").as_posix()],
         include_dirs=[(BASE_DIR / "includes").as_posix()]
     )
 ]
