@@ -146,7 +146,7 @@ static PyObject *norm(PyObject *self, PyObject *args) {
 PyMODINIT_FUNC PyInit_linalg(void) {
   PyObject *module;
 
-  module = PyModule_Create(&calculator_Module);
+  module = PyModule_Create(&pycalc_Module);
 
   if (module == NULL)
     return NULL;

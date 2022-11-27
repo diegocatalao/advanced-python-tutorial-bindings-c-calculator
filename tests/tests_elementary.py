@@ -1,5 +1,5 @@
 import unittest
-from calculator import elementary
+from pyccalc import elementary
 
 
 class ElementaryTest(unittest.TestCase):
