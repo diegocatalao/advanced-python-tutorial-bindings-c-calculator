@@ -1,5 +1,6 @@
 #ifndef _H_PYCTUTORIAL_CALCULATOR_BASIC_
 #define _H_PYCTUTORIAL_CALCULATOR_BASIC_
+#define PY_SSIZE_T_CLEAN
 
 #include <python3.8/Python.h>
 
