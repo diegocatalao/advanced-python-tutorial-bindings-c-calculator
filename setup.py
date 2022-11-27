@@ -12,12 +12,12 @@ modules = [
         include_dirs=[(BASE_DIR / "includes").as_posix()]
     ),
     Extension(
-        "calculator.elementary",
+        "pyccalc.elementary",
         sources=[(BASE_DIR / "src/elementary.c").as_posix()],
         include_dirs=[(BASE_DIR / "includes").as_posix()]
     ),
     Extension(
-        "calculator.linalg",
+        "pyccalc.linalg",
         sources=[(BASE_DIR / "src/linalg.c").as_posix()],
         include_dirs=[(BASE_DIR / "includes").as_posix()]
     )

@@ -1,6 +1,6 @@
 import unittest
 
-from calculator import linalg
+from pyccalc import linalg
 
 
 class LinalgTest(unittest.TestCase):

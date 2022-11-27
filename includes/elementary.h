@@ -1,5 +1,5 @@
-#ifndef _H_PYCTUTORIAL_CALCULATOR_BASIC_
-#define _H_PYCTUTORIAL_CALCULATOR_BASIC_
+#ifndef _H_PYCTUTORIAL_PYCALC_BASIC_
+#define _H_PYCTUTORIAL_PYCALC_BASIC_
 #define PY_SSIZE_T_CLEAN
 
 #include <python3.8/Python.h>
@@ -45,7 +45,7 @@ static PyObject *divs(PyObject *self, PyObject *args);
 /* Definições do módulo */
 
 /* uma lista com as funções que serão registradas no módulo */
-static PyMethodDef calculator_elementary_ModuleMethods[] = {
+static PyMethodDef pycalc_elementary_ModuleMethods[] = {
     {
         /* nome do método */
         .ml_name = "sum",
@@ -92,11 +92,11 @@ static PyMethodDef calculator_elementary_ModuleMethods[] = {
 
 /* Inicialização do módulo */
 
-static struct PyModuleDef calculator_elementary_Module = {
+static struct PyModuleDef pycalc_elementary_Module = {
     /* Sempre inicializado com PyModuleDef_HEAD_INIT */
     .m_base = PyModuleDef_HEAD_INIT,
-    /* Nome do módulo com namespace "calculator" (não obrigatório)*/
-    .m_name = "calculator.elementary",
+    /* Nome do módulo com namespace "pyccalc" (não obrigatório)*/
+    .m_name = "pyccalc.elementary",
     /* Ponteiro para a docstring do módulo, ou nulo */
     .m_doc = "Funções elementares de uma calculadora",
     /* Indica o estado da memória do módulo tornando o módulo mais seguro
@@ -104,7 +104,7 @@ static struct PyModuleDef calculator_elementary_Module = {
        o módulo não oferece suporte a subinterpretadores */
     .m_size = -1,
     /* Ponteiro para uma lista de funções no nível do módulo */
-    .m_methods = calculator_elementary_ModuleMethods,
+    .m_methods = pycalc_elementary_ModuleMethods,
     /* Matriz de definição de slots para inicialização multifásica finalizada
        por uma entrada {0, NULL}. Quando usado por um módulo monofásico a
        entrada deve ser NULL */

@@ -1,5 +1,5 @@
-#ifndef _H_PYCTUTORIAL_CALCULATOR_BASIC_
-#define _H_PYCTUTORIAL_CALCULATOR_BASIC_
+#ifndef _H_PYCTUTORIAL_PYCALC_BASIC_
+#define _H_PYCTUTORIAL_PYCALC_BASIC_
 #define PY_SSIZE_T_CLEAN
 
 #include <math.h>
@@ -27,7 +27,7 @@ static PyObject *norm(PyObject *self, PyObject *args);
 
 /* Definições do módulo */
 
-static PyMethodDef calculator_linalg_ModuleMethods[] = {
+static PyMethodDef pycalc_linalg_ModuleMethods[] = {
     {
         .ml_name = "dot",
         .ml_meth = (PyCFunction)dot,
@@ -45,12 +45,12 @@ static PyMethodDef calculator_linalg_ModuleMethods[] = {
 
 /* Inicialização do módulo */
 
-static struct PyModuleDef calculator_Module = {
+static struct PyModuleDef pycalc_Module = {
     .m_base = PyModuleDef_HEAD_INIT,
-    .m_name = "calculator.linalg",
+    .m_name = "pyccalc.linalg",
     .m_doc = "Funções elementares para algebra linear",
     .m_size = -1,
-    .m_methods = calculator_linalg_ModuleMethods,
+    .m_methods = pycalc_linalg_ModuleMethods,
     .m_slots = NULL,
     .m_traverse = NULL,
     .m_clear = NULL,

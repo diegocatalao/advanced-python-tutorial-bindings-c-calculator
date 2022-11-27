@@ -139,7 +139,7 @@ PyMODINIT_FUNC PyInit_elementary(void) {
   /* Cria um novo PyObject para o módulo com base na lista de funções do módulo
    * dividindo o estágio de inicialização. */
   PyObject *module;
-  module = PyModule_Create(&calculator_elementary_Module);
+  module = PyModule_Create(&pycalc_elementary_Module);
 
   /* Caso haja algum erro, retorna a exceção */
   if (module == NULL)
