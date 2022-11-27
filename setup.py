@@ -7,6 +7,11 @@ BASE_DIR = Path.cwd()
 
 modules = [
     Extension(
+        "skeleton",
+        sources=[(BASE_DIR / "src/skeleton.c").as_posix()],
+        include_dirs=[(BASE_DIR / "includes").as_posix()]
+    ),
+    Extension(
         "calculator.elementary",
         sources=[(BASE_DIR / "src/elementary.c").as_posix()],
         include_dirs=[(BASE_DIR / "includes").as_posix()]
