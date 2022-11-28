@@ -29,3 +29,6 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py') --disable=C0111
+        isort --check-only --diff src setup.py tests
+        black --line-length 79 --check --diff src setup.py tests
+        clang-format -n --Werror --sort-includes -style=llvm src/*.c includes/*.h
