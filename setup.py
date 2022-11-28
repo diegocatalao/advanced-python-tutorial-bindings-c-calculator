@@ -9,18 +9,18 @@ modules = [
     Extension(
         "skeleton",
         sources=[(BASE_DIR / "src/skeleton.c").as_posix()],
-        include_dirs=[(BASE_DIR / "includes").as_posix()]
+        include_dirs=[(BASE_DIR / "includes").as_posix()],
     ),
     Extension(
         "pyccalc.elementary",
         sources=[(BASE_DIR / "src/elementary.c").as_posix()],
-        include_dirs=[(BASE_DIR / "includes").as_posix()]
+        include_dirs=[(BASE_DIR / "includes").as_posix()],
     ),
     Extension(
         "pyccalc.linalg",
         sources=[(BASE_DIR / "src/linalg.c").as_posix()],
-        include_dirs=[(BASE_DIR / "includes").as_posix()]
-    )
+        include_dirs=[(BASE_DIR / "includes").as_posix()],
+    ),
 ]
 
 options = {
