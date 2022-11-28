@@ -1,6 +1,7 @@
 # Python Avançado: Estendendo C para Python  -  Parte I
 
 Tutorial: um binding de C para Python de uma simples calculadora
+
 Você pode acessar o link do tutorial no Medium [clicando aqui](https://medium.com/@diegocatalao/python-avan%C3%A7ado-estendendo-c-para-python-parte-i-a3da91a69cb4).
 
 ## Descrição
