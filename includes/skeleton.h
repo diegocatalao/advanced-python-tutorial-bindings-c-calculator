@@ -4,7 +4,7 @@
  * tamanho paassa a ser do tipo Py_ssize_t e não int */
 #define PY_SSIZE_T_CLEAN
 
-#include <python3.8/Python.h>
+#include <Python.h>
 
 /* uma lista com as funções que serão registradas no módulo */
 static PyMethodDef skeleton_ModuleMethods[] = {

@@ -10,21 +10,33 @@ Este repositório é para a primeira parte do Tutorial Avançado de Python. Para
 
 ## Dependências
 
-Para este projeto é requerido a versão do Python >= 3.8 e algumas dependências de desenvolvimento:
+Para este projeto é requerido a versão do Python >= 3.x e algumas dependências de desenvolvimento:
 
+### Ubuntu
 ```bash
-# entendendo que você deve usar Ubuntu
-$ sudo apt-get install python3.8
-$ sudo apt-get install python3.8-dev
+$ sudo apt-get install python3
+$ sudo apt-get install python3-dev
 ```
 
+### Mac OSX
+
+Baixe o instalador para Mac [neste link](https://www.python.org/downloads/macos/).
+
 ## Instalação
+
+Antes de mais nada, adicione ao projeto sua virtualenv e instale as dependências do projeto para desenvolvimento:
+
+```bash
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ python3 -m pip install -r requirements/dev.txt
+```
 
 Para instalar o módulo você deve usar o `setup.py` que já está configurado para tal:
 
 ```bash
-$ python3.8 setup.py build
-$ python3.8 setup.py install
+$ python3 setup.py build
+$ python3 setup.py install
 ```
 
 ## Testando a aplicação
@@ -32,7 +44,7 @@ $ python3.8 setup.py install
 Você pode testar a aplicação criando um arquivo que irá chamar as funções escritas em CPython ou executar os testes unitáris na pasta `tests/`.
 
 ```bash
-$ python3.8 -m unittest
+$ python3 -m unittest
 ```
 
 ## Autores
