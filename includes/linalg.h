@@ -2,8 +2,8 @@
 #define _H_PYCTUTORIAL_PYCALC_BASIC_
 #define PY_SSIZE_T_CLEAN
 
-#include <math.h>
 #include <Python.h>
+#include <math.h>
 
 /* Funções do módulo */
 
